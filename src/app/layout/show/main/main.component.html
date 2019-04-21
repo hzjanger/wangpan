@@ -1,0 +1,39 @@
+<app-nav></app-nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="sidebar-box bg-sidebar">
+      <ul class="navbar-nav sidebar">
+        <li class="nav-item activate">
+          <a class="nav-link" ><mat-icon svgIcon="allfile"></mat-icon>全部文件</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" >图片</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">文档</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">视频</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">种子</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">音乐</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">其他</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><mat-icon svgIcon="shared"></mat-icon>我的分享</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><mat-icon svgIcon="Recycle"></mat-icon>回收站</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

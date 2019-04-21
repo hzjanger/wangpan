@@ -1,0 +1,61 @@
+<div class="d-flex justify-content-between operating">
+  <div class="operating-left">
+    <label class="btn my-btn" for="uploadFile"><mat-icon svgIcon="uploadfile"></mat-icon>上传</label>
+    <input style="display: none;" id="uploadFile" type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
+    <button class="btn my-btn"><mat-icon svgIcon="newfile"></mat-icon>新建文件夹</button>
+    <button class="btn my-btn"><mat-icon svgIcon="download"></mat-icon>离线下载</button>
+  </div>
+  <div class="operating-right">
+    <form>
+      <div class="form-input">
+        <input type="text" placeholder="搜索您的文件">
+        <span><mat-icon svgIcon="search"></mat-icon></span>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="d-flex justify-content-between file-account">
+  <span *ngIf="fileUrl.length === 1">全部文件</span>
+  <ul class="grading" *ngIf="fileUrl.length !== 1">
+    <li>
+      <a href="#">返回上一级</a>
+      <span class="ekihpeb">|</span>
+    </li>
+    <li *ngFor="let file of fileUrl;let i = index">
+      <a *ngIf="i < fileUrl.length">{{file}}</a>
+      <span *ngIf="i < fileUrl.length - 1">></span>
+    </li>
+  </ul>
+  <span>已全部加载，共23个</span>
+</div>
+<div class="file-info-box">
+  <div class="file-info-header">
+    <div class="d-flex align-items-center file-name"><span [ngClass]="{
+    'choice': allChoice,
+    'noChoice': !allChoice
+    }" (click)="allClick()"></span>文件名</div>
+    <div class="file-size">大小</div>
+    <div class="modify-date">修改日期</div>
+  </div>
+  <div class="file-info-content">
+    <div class="file-item" *ngFor="let file of fileItem" [ngClass]="{'file-item-choice': file.isChoice}">
+      <div class="d-flex justify-content-between file-name" (click)="choiceFileItem($event, file)">
+        <div class="d-flex align-items-center">
+          <span [ngClass]="{
+          'choice': file.isChoice,
+          'noChoice': !file.isChoice
+          }" (click)="inputOnClick($event, file)"></span>
+          <mat-icon [svgIcon]="file.type"></mat-icon>
+          <span (click)="fileNameOnClick($event, file)">{{file.name}}</span>
+        </div>
+        <div class="align-items-center file-operate mouseOn">
+          <mat-icon svgIcon="shared" matTooltip="分享"></mat-icon>
+          <mat-icon svgIcon="download" matTooltip="下载"></mat-icon>
+          <mat-icon svgIcon="more" matTooltip="更多"></mat-icon>
+        </div>
+      </div>
+      <div class="file-size">{{file.fileSize}}</div>
+      <div class="modify-date">{{file.updateDate}}</div>
+    </div>
+  </div>
+</div>

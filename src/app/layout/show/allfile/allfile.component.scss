@@ -1,0 +1,209 @@
+//间距为12px
+$mr75: .75rem;
+$mr5: .5rem;
+//字体大小为14px
+$secondFontSize:  .875rem;
+//字体大小为12px
+$thereFontSize: .75rem;
+
+button {
+  outline: none;
+}
+
+.operating {
+  padding: .5rem 1rem;
+
+  .operating-left {
+    label {
+      margin-bottom: 0;
+      margin-right: $mr5;
+      cursor: pointer;
+      background: #0fa9fb;
+      color: #ffffff;
+
+      mat-icon {
+        color: #ffffff;
+      }
+    }
+  }
+  .my-btn {
+    color: #09AAFF;
+    border: 1px solid #C3EAFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    height: 32px;
+    align-items: center;
+    font-size: $secondFontSize;
+    margin-right: $mr75;
+
+    mat-icon {
+      height: $secondFontSize;
+      width: $secondFontSize;
+      margin-right: $mr5;
+      color: #09AAFF;
+    }
+  }
+
+  .operating-right {
+    width: 40%;
+
+    .form-input {
+      width: 70%;
+      position: relative;
+      input {
+        border: 0;
+        height: 30px;
+        width: 100%;
+        outline: none;
+        font-size: $thereFontSize;
+        background: #f1f2f4;
+        padding-left: 15px;
+        padding-right: 2rem;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+
+      }
+
+      span {
+        position: absolute;
+        right: .5rem;
+        top: 10%;
+        cursor: pointer;
+        mat-icon {
+          height: $secondFontSize;
+          width: $secondFontSize;
+        }
+        //top: 50%;
+      }
+    }
+  }
+
+
+
+}
+
+.file-account {
+  .grading {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+      a {
+        color: #09aaff;
+        text-decoration: none;
+        font-size: $thereFontSize;
+        cursor: pointer;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      
+      a:last-child {
+        color: rgb(102, 102, 102);
+        cursor: default;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      span {
+        color: #09AAFF;
+        font-size: $thereFontSize;
+        padding: 0 4px;
+      }
+    }
+  }
+
+  >span {
+    font-size: $thereFontSize;
+    color: rgb(102, 102, 102);
+    padding-right: 1rem;
+  }
+}
+
+.file-info-box {
+  font-size: $thereFontSize;
+
+  .file-info-header {
+    margin-top: .3rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f2f6fd;
+  }
+
+  .file-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f2f6fd;
+    
+    &:hover {
+      background: #f4fbff;
+      .mouseOn {
+        display: flex;
+      }
+    }
+
+  }
+
+  .file-item-choice {
+    background: #f4fbff;
+  }
+
+  .file-name {
+    width: 60%;
+    cursor: pointer;
+    
+    .choice {
+      background: url("../../../../assets/image/checkbox.png") -32px 15px no-repeat;
+      display: block;
+      height: 44px;
+      width: 32px;
+    }
+
+    .noChoice {
+      background: url("../../../../assets/image/checkbox.png") 9px 15px no-repeat;
+      display: block;
+      height: 44px;
+      width: 32px;
+    }
+
+    mat-icon {
+      margin-right: $mr75;
+    }
+    
+    span:nth-child(3) {
+      &:hover {
+        color: #0fa9fb;
+      }
+    }
+    
+    .file-operate {
+      mat-icon {
+        height: $secondFontSize;
+        width: $secondFontSize;
+        cursor: pointer;
+        color: #09AAFF;
+        font-weight: 700;
+      }
+    }
+
+    .mouseOn {
+      display: none;
+    }
+  }
+
+  .file-size {
+    width: 16%;
+  }
+
+  .modify-date {
+    width: 23%;
+  }
+
+}

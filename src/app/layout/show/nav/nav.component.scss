@@ -1,0 +1,162 @@
+//间距为12px
+$fontMargin: .75rem;
+//字体大小为14px
+$secondFontSize:  .875rem;
+//字体大小为12px
+$thereFontSize: .75rem;
+
+.nav-header {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .05);
+  -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .05);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .05);
+
+  .nav-menu {
+    .nav-link.activate {
+      color: #09AAFF;
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        margin: auto;
+        height: 2px;
+        background: #09AAFF;
+      }
+    }
+
+    .nav-link {
+      color: #333333;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+  //用户头像
+  .avatar-box {
+    position: relative;
+    &:hover {
+      .user-info-box {
+        max-height: 300px;
+      }
+
+      .desc-arrow {
+        display: inline-flex;
+
+      }
+    }
+
+    .avatar-img-box {
+      width: 40px;
+      height: 40px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.1);
+      background-position: center center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+
+    }
+
+    >div>span {
+      color: #424e67;
+      margin-left: $fontMargin;
+      font-size: $secondFontSize;
+      font-weight: 500;
+    }
+
+    >div>mat-icon {
+      color: #333;
+      //设置图标的宽和高与字体的大小一样
+      height: $secondFontSize;
+      width: $secondFontSize;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: $fontMargin;
+    }
+
+    .desc-arrow {
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #2fc7fe;
+      position: absolute;
+      top: calc(100%);
+      left: 10%;
+      //max-height: 0;
+      display: none;
+      overflow: hidden;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+
+    }
+
+    //用户详细信息部分
+    .user-info-box {
+      width: 180px;
+      position: absolute;
+      background: #ffffff;
+      z-index: 2;
+      top: calc(100% + 10px);
+      left: -50%;
+      max-height: 0;
+      overflow: hidden;
+      -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+      -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+
+      //头部部分
+      .desc-header {
+        padding: 1.25rem 1rem 1.25rem 1rem;
+        background-color: #2fc7fe;
+
+        >span {
+          margin-left: $fontMargin;
+          font-size: $thereFontSize;
+        }
+
+      }
+
+      .navbar-nav {
+        .nav-link {
+          font-size: $thereFontSize;
+          color: #000;
+          cursor: pointer;
+        }
+
+        .nav-item:hover {
+          background-color: #f0f8fd;
+        }
+      }
+    }
+  }
+
+  //消息
+  .notice {
+    >a>mat-icon {
+      //设置图标的宽和高与字体的大小一样
+      width: $secondFontSize;
+      height: $secondFontSize;
+      cursor: pointer;
+      margin-left: $fontMargin;
+    }
+
+
+  }
+}
+

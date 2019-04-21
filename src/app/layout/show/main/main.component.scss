@@ -1,0 +1,80 @@
+//间距为12px
+$fontMargin: .75rem;
+//字体大小为14px
+$secondFontSize:  .875rem;
+//字体大小为12px
+$thereFontSize: .75rem;
+
+.sidebar-box {
+  width: 194px;
+  position: relative;
+
+  .sidebar {
+    height: calc(100vh - 58.72px);
+    overflow: auto;
+    padding-top: 10px;
+
+    li {
+      padding-left: 1rem;
+      cursor: pointer;
+      height: 38px;
+      &:hover {
+        background-color: rgba(0,0,0,.05);
+      }
+
+      a {
+        padding-left: 2rem;
+        font-size: $secondFontSize;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      a>mat-icon {
+        margin-left: -2rem;
+        margin-right: 1rem;
+        height: $secondFontSize;
+        width: $secondFontSize;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .activate {
+    color: #09AAFF;
+    background-color: rgba(0,0,0,.05);
+  }
+}
+
+
+
+.col-10-5 {
+  flex: 0 0 87.5%;
+  max-width: 87.5%;
+}
+
+.bg-sidebar {
+  background-color: #f7f7f7;
+
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: #999;
+  -webkit-border-radius: 7px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+}
